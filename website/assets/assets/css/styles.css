@@ -1,4 +1,4 @@
-/*   
+/*
  * Template Name: PrettyDocs - Bootstrap 4 Template for documentations
  * Version: 2.0
  * Author: Xiaoying Riley
@@ -422,7 +422,7 @@ select {
 
 /* ======= Doc Styling ======= */
 .doc-wrapper {
-  padding: 45px 0;
+  padding: 5px 0;
   background: #f9f9fb;
 }
 
@@ -1024,7 +1024,7 @@ select {
   top: 15px;
 }
 
-.affix, 
+.affix,
 .affix-bottom {
   width: 230px;
 }
