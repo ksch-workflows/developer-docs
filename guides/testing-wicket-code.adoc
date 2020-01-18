@@ -1,4 +1,6 @@
 = Testing Wicket Code
+:nofooter:
+:toc:
 
 == Wicket tester
 
