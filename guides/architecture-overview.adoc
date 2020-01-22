@@ -1,5 +1,4 @@
 = Architecture overview
-:nofooter:
 :toc: left
 
 == Components
