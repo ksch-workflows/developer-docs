@@ -1,3 +1,5 @@
 _model: homepage
 ---
 _template: homepage.html
+---
+headline: Welcome!
