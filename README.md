@@ -1,6 +1,11 @@
 # Developer Guide
 
+This repository contains the source files for the [Developer Guide](https://ksch-workflows.github.io/developer-guide/)
+website for the K.S.C.H. Workflows project.
+
 ## Dependencies
+
+The following tools need to be installed, in order to be able to work on this repository:
 
 - [Lektor](https://www.getlektor.com/): Static site generator used to compile a website with an overview over the existing documentation
 - [Asciidoctor](https://asciidoctor.org/docs/user-manual/): Tool to generate book-like documents from text files

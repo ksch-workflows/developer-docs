@@ -1,4 +1,4 @@
-= Architecture overview
+= Architecture
 :toc: left
 
 == Components

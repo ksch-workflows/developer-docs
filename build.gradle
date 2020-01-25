@@ -6,30 +6,35 @@ task compileWebsite(type: Exec) {
     '''
 }
 
-task compileGuides(type: Exec) {
+task compileManuals(type: Exec) {
     executable "bash"
-    args "-c", "asciidoctor --destination-dir docs/guides guides/*.adoc"
+    args "-c", "asciidoctor --destination-dir docs/ manuals/*.adoc"
 
     dependsOn compileWebsite
 }
 
+task testCompileManuals(type: Exec) {
+    executable "bash"
+    args "-c", "asciidoctor manuals/*.adoc"
+}
+
 task build {
-    group = 'Developer Docs'
+    group = 'Developer Guide'
     description = 'Compile the HTML files for the website'
 
-    dependsOn compileGuides
+    dependsOn compileManuals
     dependsOn compileWebsite
 }
 
 task publish(type: Exec) {
-    group = 'Developer Docs'
-    description = 'Publish a new version of the developer docs at GitHub pages'
+    group = 'Developer Guide'
+    description = 'Publish a new version of the developer guide at GitHub pages'
 
     executable "bash"
     args "-c", '''
         git add .
         git commit -m "Add new content"
-        
+
         git push upstream master
     '''
 
@@ -37,15 +42,17 @@ task publish(type: Exec) {
 }
 
 task test(type: Exec) {
-    group = 'Developer Docs'
+    group = 'Developer Guide'
     description = 'Run a local server for testing the website'
 
     executable "bash"
     args "-c", "cd website && lektor serve"
+
+    dependsOn testCompileManuals
 }
 
 task clean(type: Exec) {
-    group = 'Developer Docs'
+    group = 'Developer Guide'
     description = 'Delete the compiled website'
 
     executable "bash"

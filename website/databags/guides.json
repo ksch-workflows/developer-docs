@@ -1,22 +1,28 @@
 {
 	"content": [
 		{
-			"title": "Architecture overview",
-			"teaser": "A high-level description of the technical components and solution strategy.",
+			"title": "Architecture",
+			"teaser": "A high-level description of the technical components and solution strategy",
 			"icon": "fa fa-map",
-			"file": "./guides/architecture-overview.html"
+			"file": "./manuals/architecture.html"
 		},
 		{
-			"title": "Testing Wicket code",
-			"teaser": "How to write tests for the page components which are implemented with HTML/Java",
-			"icon": "fa fa-hammer",
-			"file": "./guides/testing-wicket-code.html"
+			"title": "Apache Wicket",
+			"teaser": "How Apache Wicket is being used for server-side HTML rendering",
+			"icon": "far fa-file-code",
+			"file": "./manuals/wicket.html"
 		},
 		{
-			"title": "Testing JavaScript code",
-			"teaser": "How to write tests for the JavaScript part of the page components.",
-			"icon": "fa fa-hammer",
-			"file": "./guides/testing-javascript-code.html"
-		}
+			"title": "JavaScript",
+			"teaser": "How JavaScript is being used for features requiring client-side processing",
+			"icon": "fab fa-js",
+			"file": "./manuals/javascript.html"
+		},
+        {
+            "title": "Gradle",
+            "teaser": "How Gradle is being for the orchestration of the compilation and testing processes",
+            "icon": "fas fa-clipboard-list",
+            "file": "./manuals/gradle.html"
+        }
 	]
 }
