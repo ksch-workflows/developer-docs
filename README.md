@@ -4,11 +4,19 @@
 
 - [Lektor](https://www.getlektor.com/): Static site generator used to compile a website with an overview over the existing documentation
 - [Asciidoctor](https://asciidoctor.org/docs/user-manual/): Tool to generate book-like documents from text files
+- [JDK 11](https://sdkman.io/jdks#AdoptOpenJDK): Required for the build tool being used for the HTML compilation ([Gradle](https://gradle.org/))
 
-## Generate HTML
+## Usage
 
 ```
-./build.sh
+# Run a local development server with the website
+./gradlew test
+
+# Compile all the HTML files
+./gradlew build
+
+# Publish a new version of the website at GitHub pages
+./gradle publish
 ```
 
 ## Credits
