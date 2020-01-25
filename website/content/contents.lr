@@ -3,3 +3,4 @@ _model: homepage
 _template: homepage.html
 ---
 headline: Welcome!
+tagline: Things which software developers need to know to contribute to the <a href="https://ksch-workflows.github.io">K.S.C.H. Workflows</a> project
