@@ -27,11 +27,9 @@ task publish(type: Exec) {
 
     executable "bash"
     args "-c", '''
-        git diff --quiet --exit-code --cached
-        if [[ $? -eq 1 ]]; then
-            git add .
-            git commit -m "Add new content"
-        fi
+        git add .
+        git commit -m "Add new content"
+        
         git push upstream master
     '''
 
