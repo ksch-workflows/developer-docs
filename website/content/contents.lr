@@ -2,5 +2,11 @@ _model: homepage
 ---
 _template: homepage.html
 ---
+pageTitle: K.S.C.H. Workflows | Developer Guide
+---
+tagline: Things which software developers need to know to contribute to the [K.S.C.H. Workflows](https://ksch-workflows.github.io) project
+---
 headline: Welcome!
-tagline: Things which software developers need to know to contribute to the <a href="https://ksch-workflows.github.io">K.S.C.H. Workflows</a> project
+---
+introduction: Below you can find documentation for topics which are relevant for the development on the [K.S.C.H. Workflows](https://ksch-workflows.github.io/) project. They range from quick start guides, over high-level descriptions, to step-by-step tutorials. If you have any question, please ask it in [our chat room on Gitter](https://gitter.im/ksch-workflows/Lobby).
+---
