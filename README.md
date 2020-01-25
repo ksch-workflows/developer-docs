@@ -1,6 +1,6 @@
 # Developer Guide
 
-This repository contains the source files for the [Developer Guide](https://ksch-workflows.github.io/developer-guide/)
+This repository contains the source files of the [Developer Guide](https://ksch-workflows.github.io/developer-guide/)
 website for the K.S.C.H. Workflows project.
 
 ## Dependencies
