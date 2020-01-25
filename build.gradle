@@ -1,0 +1,55 @@
+task compileWebsite(type: Exec) {
+    executable "bash"
+    args "-c", '''
+        cd website
+        lektor build --output-path ../docs --prune
+    '''
+}
+
+task compileGuides(type: Exec) {
+    executable "bash"
+    args "-c", "asciidoctor --destination-dir docs/guides guides/*.adoc"
+
+    dependsOn compileWebsite
+}
+
+task build {
+    group = 'Developer Docs'
+    description = 'Compile the HTML files for the website'
+
+    dependsOn compileGuides
+    dependsOn compileWebsite
+}
+
+task publish(type: Exec) {
+    group = 'Developer Docs'
+    description = 'Publish a new version of the developer docs at GitHub pages'
+
+    executable "bash"
+    args "-c", '''
+        git diff --quiet --exit-code --cached
+        if [[ $? -eq 1 ]]; then
+            git add .
+            git commit -m "Add new content"
+        fi
+        git push upstream master
+    '''
+
+    dependsOn build
+}
+
+task test(type: Exec) {
+    group = 'Developer Docs'
+    description = 'Run a local server for testing the website'
+
+    executable "bash"
+    args "-c", "cd website && lektor serve"
+}
+
+task clean(type: Exec) {
+    group = 'Developer Docs'
+    description = 'Delete the compiled website'
+
+    executable "bash"
+    args "-c", "rm -r docs/"
+}
